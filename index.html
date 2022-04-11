@@ -54,7 +54,7 @@
                     <img :src="c.image ? c.image : 'https://cdn.btc2.tech/share-cards/egg/clw.jpg'"
                         class="flex-none w-auto h-20 rounded-lg object-center object-cover shadow-xl" />
                     <div class="flex-auto space-y-1 pr-4">
-                        <h3 class="blur-sm" x-text="c.code"></h3>
+                        <h3 x-text="c.code"></h3>
                         <p class="text-rose-400 italic" x-text="c.message"></p>
                     </div>
                 </li>
@@ -65,8 +65,7 @@
                         :src="c.image ? c.image : 'https://cdn.btc2.tech/share-cards/egg/clw.jpg'"
                         class="cursor-pointer flex-none w-full h-auto rounded-lg object-center object-cover shadow-xl" />
                     <div class="py-4 px-4">
-                        <h3 x-data="{blurred: true}" @mouseover.debounce="blurred = false"
-                            x-on:mouseout="blurred = true" x-bind:class="blurred? 'blur-sm' : ''" x-text="c.code"></h3>
+                        <h3 x-text="c.code"></h3>
                         <p class="text-rose-400 italic" x-text="c.message"></p>
                         <hr class="my-2 border-rose-400">
                         <p class="text-rose-400" x-markdown="c.source ? c.source : 'Unknown'"></p>
