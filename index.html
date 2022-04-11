@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>" />
+
+    <title>BreakTheCode Codes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        body {
+        font-family: "DM Sans", sans-serif;
+      }
+      a {
+        text-decoration: underline;
+      }
+    </style>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"
+        integrity="sha512-CSBhVREyzHAjAFfBlIBakjoRUKp5h7VSweP0InR/pAJyptH7peuhCsqAI/snV+TwZmXZqoUklpXp6R6wMnYf5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//unpkg.com/marked@0.3.6"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"
+        integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/Flip.js"
+        integrity="sha512-eIfvO4i7yuWlgyaVM3J32RmpKy6c1aX3Es818mNOMN14zITqsJwPm1HlC/mBuPxQXCWaGUCpEFvzw6Quv6lnHw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="app.js"></script>
+</head>
+
+<body class="bg-rose-100 my-8" x-data="codesList">
+    <h1 class="mx-auto text-center text-rose-500 font-bold text-4xl mt-8">
+        Secret Codes
+    </h1>
+    <p class="text-rose-400 text-sm text-center mt-2 mb-8 leading-tight">
+        We've found <span x-text="codes.length"></span> secrets for now.<br>Click on a secret to expand it.
+        <br>Hover on a code to reveal it.
+    </p>
+    <ul role="list" class="text-sm font-medium text-rose-500 divide-rose-200 max-w-md mx-auto">
+        <template x-for="(c, i) in codes">
+            <div class="py-3 px-3 md:px-0 transition-opacity" x-bind:class="setClass(i)">
+
+                <li x-on:click="toggle(i)" data-flip-id="'flip-' + i" :id="'normal-' + i"
+                    class="cursor-pointer flex items-center bg-white rounded-lg space-x-4">
+                    <img :src="c.image ? c.image : 'https://cdn.btc2.tech/share-cards/egg/clw.jpg'"
+                        class="flex-none w-auto h-20 rounded-lg object-center object-cover shadow-xl" />
+                    <div class="flex-auto space-y-1 pr-4">
+                        <h3 class="blur-sm" x-text="c.code"></h3>
+                        <p class="text-rose-400 italic" x-text="c.message"></p>
+                    </div>
+                </li>
+
+                <li data-flip-id="'flip-' + i" :id="'hover-' + i"
+                    class="flex flex-col bg-white rounded-lg hidden shadow-xl shadow-rose-500/10">
+                    <img x-on:click="toggle(i)"
+                        :src="c.image ? c.image : 'https://cdn.btc2.tech/share-cards/egg/clw.jpg'"
+                        class="cursor-pointer flex-none w-full h-auto rounded-lg object-center object-cover shadow-xl" />
+                    <div class="py-4 px-4">
+                        <h3 x-data="{blurred: true}" @mouseover.debounce="blurred = false"
+                            x-on:mouseout="blurred = true" x-bind:class="blurred? 'blur-sm' : ''" x-text="c.code"></h3>
+                        <p class="text-rose-400 italic" x-text="c.message"></p>
+                        <hr class="my-2 border-rose-400">
+                        <p class="text-rose-400" x-markdown="c.source ? c.source : 'Unknown'"></p>
+                    </div>
+                </li>
+            </div>
+        </template>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+codes:
+  - title: RunHacx
+    code: HACKERMAN
+    message: Unknown
+    image: https://cdn.btc2.tech/share-cards/egg/run.jpg
+    source: https://github.com/breakthecode2/neo
+    effect: "+100"
+  - code: ENTERTHEMATRIX
+    message: Unknown
+    source: https://www.instagram.com/p/Ca5Bk5Do6fC/
+  - code: TOTHEMOON
+    message: Unknown
+    source: null
+  - code: BIGBANG
+    message: Sike! Got 'Em... Better luck next time
+    source: "`/c/Games/GTB.jpg` - GTA Vice City car explosion cheat code for the PC"
+  - code: HELPMESTEPBRO
+    message: Nobody does it better. 100 points added to your score
+    source: "`/c/libs/HelpMeStepBro.txt` - The filename"
+  - code: NEVERGONNAGIVEYOUUP
+    message: Never gonna let you down, here's 200 added to your score
+    source: "`/c/libs/demo.html` - The name of the song embedded in the text"
+    effect: "+200"
+  - title: Octocat
+    code: OCTOCAT
+    message: GitHub exclusive Octocat wallpaper unlocked
+    image: https://cdn.btc2.tech/share-cards/egg/oct.jpg
+    source: "[Twitter](https://twitter.com/GitHubEducation/status/1510648349216714756) or `/recycler/Gamer.txt`"
+  - title: Horza Forizon
+    code: FORIZON
+    message: You've unlocked Horza Forizon!
+    image: https://cdn.btc2.tech/share-cards/egg/for.jpg
+    source: https://twitter.com/dottechdomains/status/1511758072997466123
+  - code: HACKEDTHENOON
+    message: HackerNoon exclusive wallpaper unlocked
+    source: https://twitter.com/hackernoon/status/1511354565400137739
+  - title: MLH Wallpaper
+    code: LEARNBUILDSHARE
+    message: MLH exclusive wallpaper unlocked
+    image: https://cdn.btc2.tech/share-cards/egg/lea.jpg
+    source: https://twitter.com/MLHacks/status/1511010828606222344
+  - code: OPENSOURCE
+    message: You've unlocked Persian Prince!
+    image: https://cdn.btc2.tech/share-cards/egg/ope.jpg
+    source: https://twitter.com/digitalocean/status/1510995098405847046
+  - code: WOLFPACK
+    message: You've unlocked Wolfenstein 3D!
+    image: https://cdn.btc2.tech/share-cards/egg/wol.jpg
+    source: https://twitter.com/ThePracticalDev/status/1511027170495238148
+  - code: SAMMY
+    message: Digital Ocean exclusive Sammy wallpaper unlocked
+    image: https://cdn.btc2.tech/share-cards/egg/sam.jpg
+    source: "[Instagram](https://www.instagram.com/p/Cb-4oDJLs2D/)"
+  - code: DROPLETS
+    message: Digital Ocean exclusive 3D Pipes screensaver unlocked
+    image: https://cdn.btc2.tech/share-cards/egg/dro.jpg
+    source: Unknown
+  - code: SLOAN
+    message: DEV.to exclusive wallpaper unlocked
+    image: https://cdn.btc2.tech/share-cards/egg/slo.jpg
+    source: DEV.to mascot
+  - code: CLUMSY
+    message: You've unlocked Clumsy Bird!
+    image: https://cdn.btc2.tech/share-cards/egg/clu.jpg
+    source: Unknown
+  - code: SMOOTHCRIMINAL
+    message: You've been hit by, You've been struck by...
+    source: "`/c/files/Tunes.txt` - The name of the song"
+    effect: "-100"
+  - code: I<3NC
+    message: Namecheap exclusive wallpaper unlocked
+    image: https://cdn.btc2.tech/share-cards/egg/inc.jpg
+    source: "[Instagram](https://www.instagram.com/p/CcJNy94r2tk/)"
+  - code: IAMTHEONE
+    message: You are the one!
+    source: Instagram story
+  - code: FOUNDONINSTA
+    message: Huzzah! your score got boosted by 50
+    source: Instagram story
+    effect: "+50"
+  - code: CRISTIANORONALDO
+    message: SIUUU! score boosted by 99
+    source: Unknown
+    effect: "+99"
+  - code: WHEELOFFORTUNE
+    message: Woohoo! You win a score boost of 100
+    source: "`/recycler/Hmm.jpg` - The name of the TV show"
+    effect: "+100"
+  - code: MARSATTACKS
+    message: Pew pew! 100 points added to your score
+    source: "`/c/libs/Pew.png` - The name of the movie"
+    effect: "+100"
+  - code: FERMIPARADOX
+    message: The Universe is a mysterious place! Here's +100 pts
+    source: "`/c/libs/Interesting.png` - Follow the clue in the image"
+    effect: "+100"
+  - code: DEFINITELYNOTACHEATCODE
+    message: It wasn't a cheat code, what did you expect?
+    source: Don't click me
+  - code: NOTACHEATCODE
+    message: Nothing happened, it wasn't a cheat code
+    source: Found randomly
+  - code: BRICKWALL
+    message: Stage 35 complete, 100 pts added to total
+    source: "`/c/games/Battle8Bit.png` - Play with brightness & contrast"
+    effect: "+100"
+  - code: BIRDMAN<BATMAN
+    message: Clumsy Bird wallpaper unlocked
+    source: Instagram story
