@@ -8,9 +8,13 @@ document.addEventListener("alpine:initializing", () => {
     (el, { expression }, { effect, evaluateLater }) => {
       let getHTML = evaluateLater(expression);
 
+      const renderer = new marked.Renderer();
+      renderer.link = (href, title, text) =>
+        `<a target="_blank" href="${href}" title="${title}">${text}</a>`;
+
       effect(() => {
         getHTML((input) => {
-          el.innerHTML = marked(input, { sanitize: true });
+          el.innerHTML = marked(input, { sanitize: true, renderer: renderer });
         });
       });
     }
@@ -59,7 +63,6 @@ document.addEventListener("alpine:init", () => {
       }
     },
     expand(index) {
-      console.log(`Expanding ${index}`);
       const normal = document.querySelector(`#normal-${index}`),
         hover = document.querySelector(`#hover-${index}`),
         state = Flip.getState(`#normal-${index}, #hover-${index}`);
@@ -75,7 +78,6 @@ document.addEventListener("alpine:init", () => {
       });
     },
     collapse(index) {
-      console.log(`Collapsing ${index}`);
       const normal = document.querySelector(`#normal-${index}`),
         hover = document.querySelector(`#hover-${index}`),
         state = Flip.getState(`#normal-${index}, #hover-${index}`);
